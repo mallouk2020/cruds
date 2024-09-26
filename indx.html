@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>crud</h2>
+            <p>product manager system</p>
+        </div>
+
+
+        <div class="inputs" id="inputs">
+
+
+            <input id="titelp" type="text" placeholder="title ">
+            <div id="totalprice" class="totalprice">
+                <input id="price" type="number" placeholder="price">
+                <input id="tva" type="number" placeholder="tva">
+                <input id="discount" type="number" placeholder="discount">
+                <input id="ads" type="number" placeholder="ads">
+                <small id=total></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+
+
+            <button class="submet" id="submet">create</button>
+            <div class="search" > <input type="text" placeholder="search" id="search">
+                <div class="searchbtn">
+                    <button  id="titlesearch">search by title </button>
+                    <button id="categorysearch">search by category </button>
+                </div>
+
+            </div>
+            <div class="deletallbtn" id="deletallbtn">
+                 <!-- <button >delet all </button>    -->
+                </div>
+                
+        </div>
+
+
+
+
+
+
+        <div class="outputs">
+            <table id="tablebar">
+                <thead>
+                <tr>
+                    <th >id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxse</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delet</th>
+                </tr>
+
+            </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>sumsoung</td>
+                        <td>209</td>
+                        <td>90</td>
+                        <td>20</td>
+                        <td>120</td>
+                        <td>pc</td>
+                        <td><button onclick="" id="update">update</button></td>
+                        <td><button id="delet">delet</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
