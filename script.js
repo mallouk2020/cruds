@@ -107,6 +107,15 @@ function saveproduct() {
 //   استعادة المعلومات وعرضها في القائمة 
 
 
+tbody.addEventListener('click', function(event) {
+    if (event.target.classList.contains('delet')) {
+        let row = event.target.parentNode.parentNode;
+        let index = Array.from(tbody.children).indexOf(row);  // الحصول على الفهرس الصحيح
+        pro.splice(index, 1);  // حذف العنصر من المصفوفة
+        localStorage.setItem('prodact', JSON.stringify(pro));  // تحديث localStorage
+        redandrestor();  // إعادة تحميل الجدول بعد الحذف
+    }
+});
 
 
 function redandrestor() {
@@ -133,14 +142,14 @@ function redandrestor() {
         tbody.appendChild(row);
 
 
-        // استخدام querySelector للحصول على الزر داخل كل صف
-        let deleteButton = row.querySelector(".delet");
-        deleteButton.addEventListener("click", function () {
-            pro.splice(index, 1); // حذف العنصر المحدد من المصفوفة
-            localStorage.setItem('prodact', JSON.stringify(pro)); // تحديث localStorage
-            redandrestor(); // إعادة تحميل الجدول بعد الحذف
+        // // استخدام querySelector للحصول على الزر داخل كل صف
+        // let deleteButton = row.querySelector(".delet");
+        // deleteButton.addEventListener("click", function () {
+        //     pro.splice(index, 1); // حذف العنصر المحدد من المصفوفة
+        //     localStorage.setItem('prodact', JSON.stringify(pro)); // تحديث localStorage
+        //     redandrestor(); // إعادة تحميل الجدول بعد الحذف
 
-        })
+        // })
 
 
         // for (let iup = 0; iup < array.length; iup++) {)
